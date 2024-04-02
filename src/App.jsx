@@ -2,6 +2,7 @@ import { useState } from 'react'
 import {
   Box,
   Container,
+  Stack,
   Heading,
   Text,
   Button,
@@ -17,10 +18,13 @@ import {
   Center,
   SlideFade,
   Image,
-
+  HStack,
+  Divider,
 
 } from '@chakra-ui/react'
 import JolveraRedDoor from './assets/JolveraRedDoor.jpg'
+import personalData from './assets/personalData.json'
+import NILogo from './assets/ni.webp'
 
 function App() {
   const [activeTab, setActiveTab] = useState("aboutMe");
@@ -46,8 +50,8 @@ function App() {
           </Tabs>
         </VStack>
       </Box>
-      <Box w="70%" p={5}>
-        <Container size='sm'>
+      <Box w="70%" p={5} overflowY='auto' maxH='100vh'>
+        <Container maxW='3xl'>
           {activeTab === 'aboutMe' &&
           <SlideFade in={activeTab === 'aboutMe'}>
             <Box p={5} m={5}>
@@ -58,14 +62,48 @@ function App() {
           {activeTab === 'experience' &&
           <SlideFade in={activeTab === 'experience'}>
             <Box p={5} m={5}>
-              <Heading>Experience</Heading>
+              <Stack spacing={5}>
+                <Heading size='2xl'>Experience</Heading>
+                <Divider borderWidth='2px' borderColor='black' />
+                {personalData.experienceData.map((item) => (
+                  <Box key={item.id}>
+                    <HStack>
+                      <Avatar name='NI' src={NILogo} size='md' />
+                      <Heading size='lg'>{item.company}</Heading>
+                    </HStack>
+                    <Heading size='md'>{item.name}</Heading>
+                    <Text as='b'>{item.date}</Text>
+                    <Heading size='sm'>Skills:</Heading>
+                    <Text mb={2}>{item.skills}</Text>
+                    <Heading size='sm'>Description:</Heading>
+                    <Text>{item.description}</Text>
+                    <Divider orientation='horizontal' borderColor="grey" mt={5} mr={2} />
+                  </Box>
+                  
+                ))}
+              </Stack>
             </Box>
           </SlideFade> 
           }
           {activeTab === 'projects' &&
           <SlideFade in={activeTab === 'projects'}>
             <Box p={5} m={5}>
-              <Heading>Projects</Heading>
+              <Stack spacing={4}>
+                <Heading size='2xl'>Projects</Heading>
+                <Divider borderWidth='2px' borderColor='black' />
+                {personalData.projectsData.map((item) => (
+                  <Box key={item.id}>
+                    <Heading size='md'>{item.name}</Heading>
+                    <Text as='b'>{item.date}</Text>
+                    <Text mb={2}>Status: {item.status}</Text>
+                    <Heading size='sm'>Skills:</Heading>
+                    <Text mb={2}>{item.skills}</Text>
+                    <Heading size='sm'>Description:</Heading>
+                    <Text>{item.description}</Text>
+                    <Divider orientation='horizontal' borderColor="grey" mt={5} mr={2} />
+                  </Box>
+                ))}
+              </Stack>
             </Box>
           </SlideFade> 
           }
