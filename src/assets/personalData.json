@@ -1,0 +1,48 @@
+{
+    "aboutMeData": {
+        "description": "Test Content",
+        "skills": "Test"
+    },
+    "experienceData": [
+        {
+            "name": "Software Engineer Intern",
+            "date": "May 22nd, 2023 - August 11th, 2023",
+            "company": "NI",
+            "description": "As a software engineer intern, I was tasked with creating a desktop application that would give the user different options to launch another another application with specific configurations. This application is a popular software used by many of the company's customers and provides a way to better streamline user experience. Throughout my internship, I attended regular standups, had weekly meetings with my mentor and supervisor, as well as created documentation outlining my design, approach, and discoveries that would be helpful for anyone picking up the project wherever I left off.",
+            "skills": "C#, Azure DevOps, WPF, Visual Studio"
+        }
+    ],
+    "projectsData": [
+        {
+            "name": "AplCore",
+            "date": "March 18th, 2024 - Current",
+            "status": "Current Project",
+            "description": "As sort of comical idea with the state of the current job market, this project is made as a way for a user to keep track of their job applications. It would be more user managed with them needing to update details on their own, but the aim is to make it much more manageable and easy compared to using something like Excel or Google Sheets. At this point, the project can easily expand to have other features.",
+            "skills": "Backend Development, Frontend Development, Rust, React, MongoDB",
+            "link": "No current link, but available to view on my Github!"
+        },
+        {
+            "name": "GoatPlaces",
+            "date": "August 2023 - March 2024",
+            "status": "Shelved",
+            "description": "Test Content",
+            "skills": "Backend Development, RESTful APIs, ASP.NET Core, C#, MongoDB, JWTs, Microsoft Azure",
+            "link": "<link here> Current deployment is broken, but codebase is also available in Github"
+        },
+        {
+            "name": "Room World",
+            "date": "Feburary 2024 - March 2024",
+            "status": "Shelved",
+            "description": "Test Content",
+            "skills": "Backend Development, ASP.NET Core, SignalR, C#, React",
+            "link": "<link here> Current deployment is broken, but codebase is also available in Github"
+        }
+    ],
+    "hobbiesData": [],
+    "contactData": {
+        "linkedIn": "",
+        "github": "",
+        "email": ""
+    }
+    
+}
