@@ -21,11 +21,12 @@ import {
   HStack,
   Divider,
   Icon,
-  
+
 
 } from '@chakra-ui/react'
 import personalData from './assets/personalData.json'
 import NILogo from './assets/ni.webp'
+import { FaGithub, FaLinkedin } from "react-icons/fa6";
 
 function App() {
   const [activeTab, setActiveTab] = useState("aboutMe");
@@ -49,6 +50,10 @@ function App() {
               <Tab onClick={() => handleTabClick('contact')} isSelected={activeTab === 'contact'}>Contact</Tab>
             </TabList>
           </Tabs>
+          <HStack spacing={5}>
+            <Icon as={FaGithub} boxSize={12}/>
+            <Icon as={FaLinkedin} boxSize={12}/>
+          </HStack>
         </VStack>
       </Box>
       <Box w="70%" p={5} overflowY='auto' maxH='100vh'>
