@@ -20,9 +20,10 @@ import {
   Image,
   HStack,
   Divider,
+  Icon,
+  
 
 } from '@chakra-ui/react'
-import JolveraRedDoor from './assets/JolveraRedDoor.jpg'
 import personalData from './assets/personalData.json'
 import NILogo from './assets/ni.webp'
 
@@ -55,7 +56,13 @@ function App() {
           {activeTab === 'aboutMe' &&
           <SlideFade in={activeTab === 'aboutMe'}>
             <Box p={5} m={5}>
-              <Heading>About Me</Heading>
+              <Stack spacing={5} >
+                <Heading size='2xl'>About Me</Heading>
+                <Divider borderWidth='2px' borderColor='black' />
+                <Text fontSize='2xl'>{personalData.aboutMeData.intro}</Text>
+                <Text fontSize='lg'>{personalData.aboutMeData.body}</Text>
+                <Text fontSize='lg'>{personalData.aboutMeData.closing}</Text>
+              </Stack>
             </Box>
           </SlideFade>
           }
