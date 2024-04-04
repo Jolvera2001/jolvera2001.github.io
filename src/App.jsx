@@ -22,11 +22,14 @@ import {
   Divider,
   Icon,
   Link,
+  Tooltip,
+
 
 } from '@chakra-ui/react'
 import personalData from './assets/personalData.json'
 import NILogo from './assets/ni.webp'
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
+import resumePDF from './assets/Johan.pdf'
 
 function App() {
   const [activeTab, setActiveTab] = useState("aboutMe");
@@ -50,14 +53,20 @@ function App() {
             </TabList>
           </Tabs>
           <HStack spacing={5}>
-            <Link href='https://github.com/Jolvera2001'>
-              <Icon as={FaGithub} boxSize={12} />
-            </Link>
-            <Link href='https://www.linkedin.com/in/johan-olvera-b47a9b205/'>
-              <Icon as={FaLinkedin} boxSize={12}/>
-            </Link>
+            <Tooltip label="My GitHub"> 
+              <Link href='https://github.com/Jolvera2001' target='_blank'>
+                <Icon as={FaGithub} boxSize={12} />
+              </Link>
+            </Tooltip>
+            <Tooltip label='My LinkedIn'>
+              <Link href='https://www.linkedin.com/in/johan-olvera-b47a9b205/' target='_blank'>
+                <Icon as={FaLinkedin} boxSize={12}/>
+              </Link>
+            </Tooltip>
           </HStack>
-          <Button bg='blue.200'>Current Resume</Button>
+          <Tooltip label="Downloads a PDF of my resume">
+            <Button variant='ghost' as='a' href={resumePDF} download="Johan_Resume.pdf" >Current Resume</Button>
+          </Tooltip>
         </VStack>
       </Box>
       <Box w="70%" p={5} overflowY='auto' maxH='100vh'>
