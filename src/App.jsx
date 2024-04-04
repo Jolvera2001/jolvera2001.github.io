@@ -65,8 +65,10 @@ function App() {
           <SlideFade in={activeTab === 'aboutMe'}>
             <Box p={5} m={5}>
               <Stack spacing={5}>
-                <Heading size='2xl'>About Me</Heading>
-                <Divider borderWidth='2px' borderColor='black' />
+                <Center>
+                  <Heading>About Me</Heading>
+                </Center>
+                <Divider borderWidth='1.5px' borderColor='black' />
                 <Center>
                   <Text fontSize='3xl' my={5} >{personalData.aboutMeData.intro}</Text>
                 </Center>
@@ -80,8 +82,10 @@ function App() {
           <SlideFade in={activeTab === 'experience'}>
             <Box p={5} m={5}>
               <Stack spacing={5}>
-                <Heading size='2xl'>Experience</Heading>
-                <Divider borderWidth='2px' borderColor='black' />
+                <Center>
+                  <Heading>Experience</Heading>
+                </Center>
+                <Divider borderWidth='1.5px' borderColor='black' />
                 {personalData.experienceData.map((item) => (
                   <Box key={item.id}>
                     <HStack mb={2}>
@@ -96,7 +100,6 @@ function App() {
                     <Text fontSize='lg'>{item.description}</Text>
                     <Divider orientation='horizontal' borderColor="grey" mt={5} mr={2} />
                   </Box>
-                  
                 ))}
               </Stack>
             </Box>
@@ -106,8 +109,10 @@ function App() {
           <SlideFade in={activeTab === 'projects'}>
             <Box p={5} m={5}>
               <Stack spacing={4}>
-                <Heading size='2xl'>Projects</Heading>
-                <Divider borderWidth='2px' borderColor='black' />
+                <Center>
+                  <Heading>Projects</Heading>
+                </Center>
+                <Divider borderWidth='1.5px' borderColor='black' />
                 {personalData.projectsData.map((item) => (
                   <Box key={item.id}>
                     <Heading size='lg'>{item.name}</Heading>
@@ -116,7 +121,13 @@ function App() {
                     <Heading size='md'>Skills:</Heading>
                     <Text mb={2} fontSize='lg'>{item.skills}</Text>
                     <Heading size='md'>Description:</Heading>
-                    <Text fontSize='lg'>{item.description}</Text>
+                    <Text mb={5} fontSize='lg'>{item.description}</Text>
+                    <HStack>
+                      <Link href={item.link}>
+                        <Icon as={FaGithub} boxSize={10} />
+                      </Link>
+                    </HStack>
+                    <Text as='i'>Note: {item.linkDesc}</Text>
                     <Divider orientation='horizontal' borderColor="grey" mt={5} mr={2} />
                   </Box>
                 ))}
@@ -127,7 +138,12 @@ function App() {
           {activeTab === 'hobbies' &&
           <SlideFade in={activeTab === 'hobbies'}>
             <Box p={5} m={5}>
-              <Heading>Hobbies</Heading>
+              <Stack>
+                <Center>
+                  <Heading>Hobbies</Heading>
+                </Center>
+                <Divider borderWidth='1.5px' borderColor='black' />
+              </Stack>
             </Box>
           </SlideFade> 
           }

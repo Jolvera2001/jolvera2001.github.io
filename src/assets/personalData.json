@@ -2,8 +2,8 @@
     "aboutMeData": {
         "intro": "Hi, I'm Johan",
         "opening": "This is my portfolio site! I'm an aspiring software engineer and currently in college. I'm within the last few semesters of my college career so I'm preparing for the real world soon.",
-        "body": "I've had a portfolio site before, but it ended up being very complicated and was messy to maintain. This one has been very simple in contract and coding this has been incredibly fun. In terms of experience, I've had an internship and gotten experience in frontend and backend development. I've had experience with mobile programming and using NoSQL and SQL databases.",
-        "closing": "If you wan to check out my LinkedIn and Github, they're linked below the menu! Feel free to send me any feedback on my projects or connect on LinkedIn!"
+        "body": "I've had a portfolio site before, but it ended up being very complicated and was messy to maintain. This one has been very simple in contrast and coding this has been incredibly fun. In terms of experience, I've had an internship that exposed me to C#, and also kickstarted my learning journey as I've made projects exploring both the frontend and backend sides of software engineering. Although I may not know everything, I've been doing my best to keep busy and to keep learning as much as I can.",
+        "closing": "If you want to check out my LinkedIn and Github, they're linked below the menu! Feel free to send me any feedback on my projects or connect on LinkedIn!"
     },
     "experienceData": [
         {
@@ -21,23 +21,26 @@
             "status": "Current Project",
             "description": "As sort of comical idea with the state of the current job market, this project is made as a way for a user to keep track of their job applications. It would be more user managed with them needing to update details on their own, but the aim is to make it much more manageable and easy compared to using something like Excel or Google Sheets. At this point, the project can easily expand to have other features.",
             "skills": "Backend Development, Frontend Development, Rust, React, MongoDB",
-            "link": "No current link, but available to view on my Github!"
+            "link": "https://github.com/Jolvera2001/AplCore",
+            "linkDesc": "No current link or deployment, but the codebase is available to view on my Github!"
         },
         {
             "name": "GoatPlaces",
             "date": "August 2023 - March 2024",
             "status": "Shelved",
-            "description": "Test Content",
+            "description": "This project was my senior project where I worked with two others. I was mainly focused on developing the backend and this was an incredibly rough project. The reasons included team coordination, discussions, lacking knowledge, etc, but in the end, we were able to get something going. After our presentation and shelving this project, I'm continuously thinking on different ways to improve this project if we ever work on it again. I'm hoping to get far with this project someday.",
             "skills": "Backend Development, RESTful APIs, ASP.NET Core, C#, MongoDB, JWTs, Microsoft Azure",
-            "link": "<link here> Current deployment is broken, but codebase is also available in Github"
+            "link": "https://github.com/Jolvera2001/goatApp",
+            "linkDesc": "The Current deployment on Azure is broken, but the codebase is also available in Github"
         },
         {
             "name": "Room World",
             "date": "Feburary 2024 - March 2024",
             "status": "Shelved",
-            "description": "Test Content",
+            "description": "This was more of a experimental project working with SingalR and websockets. It also introduced me to Typescript in React, which was incredibly difficult. I also used a 3D engine library and was aiming to use all of these to sort of make a game where one player can join another in a 'room' and sort of interact with each other in real time. I've only gotten as far as generating another player model within one's screen so I know I'm almost there with achieving somehing to show off.",
             "skills": "Backend Development, ASP.NET Core, SignalR, C#, React",
-            "link": "<link here> Current deployment is broken, but codebase is also available in Github"
+            "link": "https://github.com/Jolvera2001/Room-world",
+            "linkDesc": "The Codebase is available on Github!"
         }
     ],
     "hobbiesData": []
