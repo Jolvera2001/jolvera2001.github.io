@@ -57,6 +57,7 @@ function App() {
               <Icon as={FaLinkedin} boxSize={12}/>
             </Link>
           </HStack>
+          <Button bg='blue.200'>Current Resume</Button>
         </VStack>
       </Box>
       <Box w="70%" p={5} overflowY='auto' maxH='100vh'>
@@ -89,7 +90,7 @@ function App() {
                 {personalData.experienceData.map((item) => (
                   <Box key={item.id}>
                     <HStack mb={2}>
-                      <Avatar name='NI' src={NILogo} size='md' />
+                      <Image name='NI' src={NILogo} boxSize='50px' objectFit='cover' />
                       <Heading size='lg'>{item.company}</Heading>
                     </HStack>
                     <Heading size='lg'>{item.name}</Heading>
