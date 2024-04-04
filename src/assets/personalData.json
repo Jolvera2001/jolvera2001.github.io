@@ -1,7 +1,9 @@
 {
     "aboutMeData": {
-        "description": "Test Content",
-        "skills": "Test"
+        "intro": "Hi, I'm Johan",
+        "opening": "This is my portfolio site! I'm an aspiring software engineer and currently in college. I'm within the last few semesters of my college career so I'm preparing for the real world soon.",
+        "body": "I've had a portfolio site before, but it ended up being very complicated and was messy to maintain. This one has been very simple in contract and coding this has been incredibly fun. In terms of experience, I've had an internship and gotten experience in frontend and backend development. I've had experience with mobile programming and using NoSQL and SQL databases.",
+        "closing": "If you wan to check out my LinkedIn and Github, they're linked below the menu! Feel free to send me any feedback on my projects or connect on LinkedIn!"
     },
     "experienceData": [
         {
@@ -38,11 +40,5 @@
             "link": "<link here> Current deployment is broken, but codebase is also available in Github"
         }
     ],
-    "hobbiesData": [],
-    "contactData": {
-        "linkedIn": "",
-        "github": "",
-        "email": ""
-    }
-    
+    "hobbiesData": []
 }

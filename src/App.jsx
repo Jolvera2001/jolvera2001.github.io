@@ -20,11 +20,13 @@ import {
   Image,
   HStack,
   Divider,
+  Icon,
+  Link,
 
 } from '@chakra-ui/react'
-import JolveraRedDoor from './assets/JolveraRedDoor.jpg'
 import personalData from './assets/personalData.json'
 import NILogo from './assets/ni.webp'
+import { FaGithub, FaLinkedin } from "react-icons/fa6";
 
 function App() {
   const [activeTab, setActiveTab] = useState("aboutMe");
@@ -45,9 +47,16 @@ function App() {
               <Tab onClick={() => handleTabClick('experience')} isSelected={activeTab === 'experience'}>Experience</Tab>
               <Tab onClick={() => handleTabClick('projects')} isSelected={activeTab === 'projects'}>Projects</Tab>
               <Tab onClick={() => handleTabClick('hobbies')} isSelected={activeTab === 'hobbies'}>Hobbies</Tab>
-              <Tab onClick={() => handleTabClick('contact')} isSelected={activeTab === 'contact'}>Contact</Tab>
             </TabList>
           </Tabs>
+          <HStack spacing={5}>
+            <Link href='https://github.com/Jolvera2001'>
+              <Icon as={FaGithub} boxSize={12} />
+            </Link>
+            <Link href='https://www.linkedin.com/in/johan-olvera-b47a9b205/'>
+              <Icon as={FaLinkedin} boxSize={12}/>
+            </Link>
+          </HStack>
         </VStack>
       </Box>
       <Box w="70%" p={5} overflowY='auto' maxH='100vh'>
@@ -55,7 +64,15 @@ function App() {
           {activeTab === 'aboutMe' &&
           <SlideFade in={activeTab === 'aboutMe'}>
             <Box p={5} m={5}>
-              <Heading>About Me</Heading>
+              <Stack spacing={5}>
+                <Heading size='2xl'>About Me</Heading>
+                <Divider borderWidth='2px' borderColor='black' />
+                <Center>
+                  <Text fontSize='3xl' my={5} >{personalData.aboutMeData.intro}</Text>
+                </Center>
+                <Text fontSize='xl'>{personalData.aboutMeData.body}</Text>
+                <Text fontSize='xl'>{personalData.aboutMeData.closing}</Text>
+              </Stack>
             </Box>
           </SlideFade>
           }
@@ -67,16 +84,16 @@ function App() {
                 <Divider borderWidth='2px' borderColor='black' />
                 {personalData.experienceData.map((item) => (
                   <Box key={item.id}>
-                    <HStack>
+                    <HStack mb={2}>
                       <Avatar name='NI' src={NILogo} size='md' />
                       <Heading size='lg'>{item.company}</Heading>
                     </HStack>
-                    <Heading size='md'>{item.name}</Heading>
-                    <Text as='b'>{item.date}</Text>
-                    <Heading size='sm'>Skills:</Heading>
-                    <Text mb={2}>{item.skills}</Text>
-                    <Heading size='sm'>Description:</Heading>
-                    <Text>{item.description}</Text>
+                    <Heading size='lg'>{item.name}</Heading>
+                    <Text as='b' fontSize='lg'>{item.date}</Text>
+                    <Heading size='md' mt={2} >Skills:</Heading>
+                    <Text mb={2} fontSize='lg'>{item.skills}</Text>
+                    <Heading size='md'>Description:</Heading>
+                    <Text fontSize='lg'>{item.description}</Text>
                     <Divider orientation='horizontal' borderColor="grey" mt={5} mr={2} />
                   </Box>
                   
@@ -93,13 +110,13 @@ function App() {
                 <Divider borderWidth='2px' borderColor='black' />
                 {personalData.projectsData.map((item) => (
                   <Box key={item.id}>
-                    <Heading size='md'>{item.name}</Heading>
-                    <Text as='b'>{item.date}</Text>
-                    <Text mb={2}>Status: {item.status}</Text>
-                    <Heading size='sm'>Skills:</Heading>
-                    <Text mb={2}>{item.skills}</Text>
-                    <Heading size='sm'>Description:</Heading>
-                    <Text>{item.description}</Text>
+                    <Heading size='lg'>{item.name}</Heading>
+                    <Text as='b' fontSize='lg'>{item.date}</Text>
+                    <Text mb={2} fontSize='lg'>Status: {item.status}</Text>
+                    <Heading size='md'>Skills:</Heading>
+                    <Text mb={2} fontSize='lg'>{item.skills}</Text>
+                    <Heading size='md'>Description:</Heading>
+                    <Text fontSize='lg'>{item.description}</Text>
                     <Divider orientation='horizontal' borderColor="grey" mt={5} mr={2} />
                   </Box>
                 ))}
@@ -111,13 +128,6 @@ function App() {
           <SlideFade in={activeTab === 'hobbies'}>
             <Box p={5} m={5}>
               <Heading>Hobbies</Heading>
-            </Box>
-          </SlideFade> 
-          }
-          {activeTab === 'contact' &&
-          <SlideFade in={activeTab === 'contact'}>
-            <Box p={5} m={5}>
-              <Heading>Contact</Heading>
             </Box>
           </SlideFade> 
           }
