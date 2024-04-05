@@ -133,7 +133,7 @@ function App() {
                     <Heading size='md'>Description:</Heading>
                     <Text mb={6} fontSize='xl'>{item.description}</Text>
                     <HStack>
-                      <Link href={item.link}>
+                      <Link href={item.link} target='_blank'>
                         <Icon as={FaGithub} boxSize={10} />
                       </Link>
                     </HStack>
