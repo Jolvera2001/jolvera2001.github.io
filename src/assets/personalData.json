@@ -2,13 +2,13 @@
     "aboutMeData": {
         "intro": "Hi, I'm Johan",
         "opening": "This is my portfolio site! I'm an aspiring software engineer and currently in college. I'm within the last few semesters of my college career so I'm preparing for the real world soon.",
-        "body": "I've had a portfolio site before, but it ended up being very complicated and was messy to maintain. This one has been very simple in contrast and coding this has been incredibly fun. In terms of experience, I've had an internship that exposed me to C#, and also kickstarted my learning journey as I've made projects exploring both the frontend and backend sides of software engineering. Although I may not know everything, I've been doing my best to keep busy and to keep learning as much as I can.",
+        "body": "I've had a portfolio site before, but it ended up being very complicated and was messy to maintain. This one has been very simple in contrast and coding this has been incredibly fun. I'm an aspiring software engineer currently in college, and I'm constantly looking for something to do in order to keep learning! I've gotten experience in both the frontend and backend sides of development and I'm hoping to get a role as a software engineer to go deep into these technologies",
         "closing": "If you want to check out my LinkedIn and Github, the icons on the left will lead to my profiles! Feel free to send me any feedback on my projects or connect on LinkedIn!"
     },
     "experienceData": [
         {
             "name": "Software Engineer Intern",
-            "date": "May 22nd, 2023 - August 11th, 2023",
+            "date": "May 2023 - August 2023",
             "company": "NI",
             "description": "As a software engineer intern, I was tasked with creating a desktop application that would give the user different options to launch another another application with specific configurations. This application is a popular software used by many of the company's customers and provides a way to better streamline user experience. Throughout my internship, I attended regular standups, had weekly meetings with my mentor and supervisor, as well as created documentation outlining my design, approach, and discoveries that would be helpful for anyone picking up the project wherever I left off.",
             "skills": "C#, Azure DevOps, WPF, Visual Studio"
@@ -17,7 +17,7 @@
     "projectsData": [
         {
             "name": "AplCore",
-            "date": "March 18th, 2024 - Current",
+            "date": "March 2024 - Current",
             "status": "Current Project",
             "description": "As sort of comical idea with the state of the current job market, this project is made as a way for a user to keep track of their job applications. It would be more user managed with them needing to update details on their own, but the aim is to make it much more manageable and easy compared to using something like Excel or Google Sheets. At this point, the project can easily expand to have other features.",
             "skills": "Backend Development, Frontend Development, Rust, React, MongoDB",
@@ -43,5 +43,16 @@
             "linkDesc": "The Codebase is available on Github!"
         }
     ],
-    "hobbiesData": []
+    "hobbiesData": [
+        {
+            "hobby": "Leather Craft",
+            "description": "Leather craft was something I didn't really expect to get into, but one day I got a small craft kit for making a wallet and once I finished it was an amazing feeling. Afterwards, I ended up doing tons of research over what sort of thigns you can do with leather craft. In the end, I ended up learning a bit about leather maintenance with conditioners and waxes, as well as transferable skills like sewing in general.",
+            "plans": "I haven't had to chance to do much more than a few other kits throughout my college career and leather is pricey, but in the future, I do plan on getting more involved in creating designs and seeing if I can end up selling some of the things I make. For now though, I can't really do much."
+        },
+        {
+            "hobby": "Video Games",
+            "description": "This has been a very huge part of my life, and although I haven't been playing as much as I did in the past, I do end up taking some evenings just to play some video games to relax. I've played a lot of different games: strategy, FPS, 3rd Person, etc.",
+            "plans": "One thing I've thought about since I do know programming is maybe creating my own game, but barriers like art (ESPECIALLY ART) takes time to learn and implement and so much more to get down correctly. Music wouldn't be too hard since I've had a big background in music, it would just be a matter of relearning concepts and experimenting."
+        }
+    ]
 }

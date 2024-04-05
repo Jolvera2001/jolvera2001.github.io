@@ -70,7 +70,7 @@ function App() {
         </VStack>
       </Box>
       <Box w="70%" p={5} overflowY='auto' maxH='100vh'>
-        <Container maxW='3xl'>
+        <Container maxW='4xl'>
           {activeTab === 'aboutMe' &&
           <SlideFade in={activeTab === 'aboutMe'}>
             <Box p={5} m={5}>
@@ -103,11 +103,11 @@ function App() {
                       <Heading size='lg'>{item.company}</Heading>
                     </HStack>
                     <Heading size='lg'>{item.name}</Heading>
-                    <Text as='b' fontSize='lg'>{item.date}</Text>
-                    <Heading size='md' mt={2} >Skills:</Heading>
-                    <Text mb={2} fontSize='lg'>{item.skills}</Text>
+                    <Text as='b' fontSize='xl'>{item.date}</Text>
+                    <Heading size='md' mt={3} >Skills:</Heading>
+                    <Text mb={3} fontSize='xl'>{item.skills}</Text>
                     <Heading size='md'>Description:</Heading>
-                    <Text fontSize='lg'>{item.description}</Text>
+                    <Text fontSize='xl'>{item.description}</Text>
                     <Divider orientation='horizontal' borderColor="grey" mt={5} mr={2} />
                   </Box>
                 ))}
@@ -126,12 +126,12 @@ function App() {
                 {personalData.projectsData.map((item) => (
                   <Box key={item.id}>
                     <Heading size='lg'>{item.name}</Heading>
-                    <Text as='b' fontSize='lg'>{item.date}</Text>
-                    <Text mb={2} fontSize='lg'>Status: {item.status}</Text>
+                    <Text as='b' fontSize='xl'>{item.date}</Text>
+                    <Text mb={3} fontSize='xl'>Status: {item.status}</Text>
                     <Heading size='md'>Skills:</Heading>
-                    <Text mb={2} fontSize='lg'>{item.skills}</Text>
+                    <Text mb={3} fontSize='xl'>{item.skills}</Text>
                     <Heading size='md'>Description:</Heading>
-                    <Text mb={5} fontSize='lg'>{item.description}</Text>
+                    <Text mb={6} fontSize='xl'>{item.description}</Text>
                     <HStack>
                       <Link href={item.link}>
                         <Icon as={FaGithub} boxSize={10} />
@@ -148,11 +148,19 @@ function App() {
           {activeTab === 'hobbies' &&
           <SlideFade in={activeTab === 'hobbies'}>
             <Box p={5} m={5}>
-              <Stack>
+              <Stack spacing={4}> 
                 <Center>
                   <Heading>Hobbies</Heading>
                 </Center>
                 <Divider borderWidth='1.5px' borderColor='black' />
+                {personalData.hobbiesData.map((item) => (
+                  <Box key={item.id}>
+                    <Heading mb={5} size='lg'>{item.hobby}</Heading>
+                    <Text mb={3} fontSize='xl'>{item.description}</Text>
+                    <Text fontSize='xl'>{item.plans}</Text>
+                    <Divider orientation='horizontal' borderColor="grey" mt={5} mr={2} />
+                  </Box>
+                ))}
               </Stack>
             </Box>
           </SlideFade> 
