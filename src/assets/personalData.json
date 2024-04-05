@@ -11,6 +11,7 @@
             "date": "May 2023 - August 2023",
             "company": "NI",
             "description": "As a software engineer intern, I was tasked with creating a desktop application that would give the user different options to launch another another application with specific configurations. This application is a popular software used by many of the company's customers and provides a way to better streamline user experience. Throughout my internship, I attended regular standups, had weekly meetings with my mentor and supervisor, as well as created documentation outlining my design, approach, and discoveries that would be helpful for anyone picking up the project wherever I left off.",
+            "impact":"I created a piece of software that would end up being used for many of the company's customers. Within a few weeks of my internship, I was able to create a prototype and spent the majority of my time at NI implementing features and implemented some UI. I communicated with many different teams across the company and presneting demos to these teams and even the Product Manager for the team I worked with. It was an amazing experience knowing that I started work on software that would end up being used by many people and it was a huge motivator for my work.",
             "skills": "C#, Azure DevOps, WPF, Visual Studio"
         }
     ],
