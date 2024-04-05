@@ -107,7 +107,9 @@ function App() {
                     <Heading size='md' mt={3} >Skills:</Heading>
                     <Text mb={3} fontSize='xl'>{item.skills}</Text>
                     <Heading size='md'>Description:</Heading>
-                    <Text fontSize='xl'>{item.description}</Text>
+                    <Text mb={3} fontSize='xl'>{item.description}</Text>
+                    <Heading size='md'>Impact:</Heading>
+                    <Text fontSize='xl'>{item.impact}</Text>
                     <Divider orientation='horizontal' borderColor="grey" mt={5} mr={2} />
                   </Box>
                 ))}
