@@ -20,7 +20,7 @@
             "name": "AplCore",
             "date": "March 2024 - Current",
             "status": "Current Project",
-            "description": "As sort of comical idea with the state of the current job market, this project is made as a way for a user to keep track of their job applications. It would be more user managed with them needing to update details on their own, but the aim is to make it much more manageable and easy compared to using something like Excel or Google Sheets. At this point, the project can easily expand to have other features.",
+            "description": "As sort of an ironic idea with the state of the current job market, this project is made as a way for a user to keep track of their job applications. It would be more user managed with them needing to update details on their own, but the aim is to make it much more manageable and easy compared to using something like Excel or Google Sheets. At this point, the project can easily expand to have other features. This project honestly started as a joke but ended up being something that was working well and I stuck with it.",
             "skills": "Backend Development, Frontend Development, Rust, React, MongoDB",
             "link": "https://github.com/Jolvera2001/AplCore",
             "linkDesc": "No current link or deployment, but the codebase is available to view on my Github!"
