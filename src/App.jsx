@@ -41,7 +41,7 @@ function App() {
   return (
     <>
     <Flex>
-      <Box w='30%' height="100vh" bg='red.400' pt={32} boxShadow='lg' display='flex' alignContent='center' justifyContent='center'>
+      <Box w='30%' height="100vh" bg='red.400' pt={20} boxShadow='lg' display='flex' alignContent='center' justifyContent='center'>
         <VStack spacing={5}>
           <Heading>Johan Olvera</Heading>
           <Tabs isLazy orientation='vertical' variant='soft-rounded' size='lg' colorScheme='orange'>
@@ -50,6 +50,7 @@ function App() {
               <Tab onClick={() => handleTabClick('experience')} isSelected={activeTab === 'experience'}>Experience</Tab>
               <Tab onClick={() => handleTabClick('projects')} isSelected={activeTab === 'projects'}>Projects</Tab>
               <Tab onClick={() => handleTabClick('hobbies')} isSelected={activeTab === 'hobbies'}>Hobbies</Tab>
+              <Tab onClick={() => handleTabClick('blog')} isSelected={activeTab === 'blog'}>Blog</Tab>
             </TabList>
           </Tabs>
           <HStack spacing={5}>
