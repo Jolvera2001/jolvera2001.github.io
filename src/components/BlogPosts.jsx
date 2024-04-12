@@ -2,29 +2,44 @@ import { useState } from 'react';
 import {
     Box,
     Container,
+    Heading,
     Card,
     CardBody,
     CardFooter,
     CardHeader,
-    Divider
+    Divider,
+    Text,
+    UnorderedList,
+    ListItem,
 
 } from '@chakra-ui/react';
 import ReactMarkdown from 'react-markdown';
 
 function BlogPost(blogList) {
-    console.log(blogList);
+    
+
     return (
         <Box>
             {blogList.data.length > 0 ? ( 
                 blogList.data.map((post, index) => (
                 <Card key={index} mb={4}>
-                    <CardHeader >
-                        {post.title}
+                    <CardHeader fontSize='xl'>
+                        <Heading mb={2}>
+                            {post.title}
+                        </Heading>
+                            <Text as='i'>{new Date(post.created.iso).toLocaleString("en-US",{
+                                weekday: "long",
+                                year: "numeric",
+                                month: "long",
+                                day: "numeric"
+                            })}</Text>
                     </CardHeader>
                     <Divider />
                     <CardBody>
                         <ReactMarkdown components={{
-                            p: 'Text'
+                            h1: ({ children }) => <Text fontSize='2xl' mb={2}>{children}</Text>,
+                            p: ({ children }) => <Text mb={2} fontSize='lg'>{children}</Text>,
+                                li: ({ children }) => <UnorderedList><ListItem fontSize='lg'>{children}</ListItem></UnorderedList>
                         }}>
                             {post.docContent.markdown}
                         </ReactMarkdown>
