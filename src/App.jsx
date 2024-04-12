@@ -7,14 +7,10 @@ import {
   Text,
   Button,
   Flex,
-  Spacer,
   VStack,
   Tabs,
   TabList,
-  TabPanels,
   Tab,
-  TabPanel,
-  Avatar,
   Center,
   SlideFade,
   Image,
@@ -27,7 +23,6 @@ import {
 
 } from '@chakra-ui/react';
 import personalData from './assets/personalData.json';
-import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import NILogo from './assets/ni.webp';
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
@@ -37,7 +32,6 @@ import BlogPost from './components/BlogPosts';
 function App() {
   const [activeTab, setActiveTab] = useState("aboutMe");
   const [blogList, setBlogList] = useState([]);
-  const [quilledBlogs, setQuilledBlogs] = useState([]);
 
   useEffect(() => {
     const getBlogs = async () => {
@@ -56,10 +50,6 @@ function App() {
 
     getBlogs();
   }, []);
-
-  useEffect(() => {
-    console.log(blogList);
-  }, [blogList]);
 
   const handleTabClick = (tabName) => {
     setActiveTab(tabName);
