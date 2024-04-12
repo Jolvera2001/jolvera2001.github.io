@@ -38,14 +38,21 @@ function App() {
   const [blogList, setBlogList] = useState([]);
 
   const getBlogs = async () => {
-    const response = await fetch("https://jolveraorg.jetbrains.space/api/http/blog?$fields=data(docContent,title,attachments)", {
+    const response = await fetch("https://jolveraorg.jetbrains.space/api/http/blog?$fields=data(author,created,title,docContent),next,totalCount", 
+    {
+      method: 'GET',
       headers :{
-        'Authorization': `Bearer ${process.env.REACT_APP_SPACE_TOKEN}`
+        'Authorization': `Bearer ${import.meta.env.VITE_APP_SPACE_TOKEN}`,
+        'Accept': 'application/json',
       }
     });
 
     const data = await response.json();
+    const quill = new ReactQuill().Quill();
+    const delta = quill.clipboard.convert(data.data[0].docContent);
+    quill.setContents(delta);
 
+    console.log(quill.getContents());
   }
 
   const handleTabClick = (tabName) => {
@@ -64,7 +71,7 @@ function App() {
               <Tab onClick={() => handleTabClick('experience')} isSelected={activeTab === 'experience'}>Experience</Tab>
               <Tab onClick={() => handleTabClick('projects')} isSelected={activeTab === 'projects'}>Projects</Tab>
               <Tab onClick={() => handleTabClick('hobbies')} isSelected={activeTab === 'hobbies'}>Hobbies</Tab>
-              <Tab onClick={() => handleTabClick('blog')} isSelected={activeTab === 'blog'}>Blog</Tab>
+              <Tab onClick={() => {handleTabClick('blog'); getBlogs();}} isSelected={activeTab === 'blog'}>Blog</Tab>
             </TabList>
           </Tabs>
           <HStack spacing={5}>
