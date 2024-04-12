@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState } from 'react';
 import {
   Box,
   Container,
@@ -25,14 +25,28 @@ import {
   Tooltip,
 
 
-} from '@chakra-ui/react'
-import personalData from './assets/personalData.json'
-import NILogo from './assets/ni.webp'
+} from '@chakra-ui/react';
+import personalData from './assets/personalData.json';
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
+import NILogo from './assets/ni.webp';
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
-import resumePDF from './assets/Johan.pdf'
+import resumePDF from './assets/Johan.pdf';
 
 function App() {
   const [activeTab, setActiveTab] = useState("aboutMe");
+  const [blogList, setBlogList] = useState([]);
+
+  const getBlogs = async () => {
+    const response = await fetch("https://jolveraorg.jetbrains.space/api/http/blog?$fields=data(docContent,title,attachments)", {
+      headers :{
+        'Authorization': `Bearer ${process.env.REACT_APP_SPACE_TOKEN}`
+      }
+    });
+
+    const data = await response.json();
+
+  }
 
   const handleTabClick = (tabName) => {
     setActiveTab(tabName);
@@ -168,6 +182,17 @@ function App() {
             </Box>
           </SlideFade> 
           }
+          {activeTab === 'blog' &&
+          <SlideFade in={activeTab === 'blog'}>
+            <Box p={5} m={5}>
+              <Stack spacing={4}>
+                <Center>
+                  <Heading>Blog</Heading>
+                </Center>
+                <Divider borderWidth='1.5px' borderColor='black' />
+              </Stack>
+            </Box> 
+          </SlideFade>}
         </Container>
       </Box>
     </Flex>
