@@ -42,7 +42,8 @@ jobs:
         env:
           VITE_APP_SPACE_TOKEN: ${{ secrets.VITE_APP_SPACE_TOKEN }}
       - name: debug token
-        run: echo "${{ secrets.VITE_APP_SPACE_TOKEN[:5] }}...${{ secrets.VITE_APP_SPACE_TOKEN[-5:] }}"
+        run: |
+          echo "${{ secrets.VITE_APP_SPACE_TOKEN:0:5 }}...${{ secrets.VITE_APP_SPACE_TOKEN: -5 }}"
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
