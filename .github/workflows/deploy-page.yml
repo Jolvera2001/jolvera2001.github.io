@@ -39,6 +39,8 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build
+        env:
+          VITE_APP_SPACE_TOKEN: ${{ secrets.VITE_APP_SPACE_TOKEN }}
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
