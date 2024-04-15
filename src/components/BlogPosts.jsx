@@ -19,7 +19,7 @@ function BlogPost(blogList) {
         <Box>
             {blogList.data.length > 0 ? ( 
                 blogList.data.map((post, index) => (
-                <Card key={index} mb={4}>
+                <Card key={index} mb={4} boxShadow='2xl'>
                     <CardHeader fontSize='xl'>
                         <Heading mb={2}>
                             {post.title}
