@@ -95,11 +95,11 @@ function App() {
                     <Divider borderWidth='1.5px' borderColor='black' />
                     {personalData.experienceData.map((item) => (
                       <Box key={item.id}>
-                        <HStack mb={2}>
+                        <Heading size='lg'>{item.name}</Heading>
+                        <HStack my={3}>
                           <Image name={item.company} src={item.img} boxSize='50px' objectFit='cover' />
                           <Heading size='lg'>{item.company}</Heading>
                         </HStack>
-                        <Heading size='lg'>{item.name}</Heading>
                         <Text as='b' fontSize='xl'>{item.date}</Text>
                         <Heading size='md' mt={3} >Skills:</Heading>
                         <Text mb={3} fontSize='xl'>{item.skills}</Text>
