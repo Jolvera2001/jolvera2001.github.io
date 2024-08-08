@@ -25,11 +25,13 @@ import {
 import personalData from './assets/personalData.json';
 import 'react-quill/dist/quill.snow.css';
 import NILogo from './assets/ni.webp';
+import VeradigmLogo from './assets/veradigm.png'
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
 import resumePDF from './assets/Johan.pdf';
 
 function App() {
   const [activeTab, setActiveTab] = useState("aboutMe");
+  const logos = [VeradigmLogo, NILogo];
 
   const handleTabClick = (tabName) => {
     setActiveTab(tabName);
@@ -93,11 +95,11 @@ function App() {
                       <Heading>Experience</Heading>
                     </Center>
                     <Divider borderWidth='1.5px' borderColor='black' />
-                    {personalData.experienceData.map((item) => (
+                    {personalData.experienceData.map((item, index) => (
                       <Box key={item.id}>
                         <Heading size='lg'>{item.name}</Heading>
                         <HStack my={3}>
-                          <Image name={item.company} src={item.img} boxSize='50px' objectFit='cover' />
+                          <Image name={item.company} src={logos[index]} boxSize='50px' objectFit='cover' />
                           <Heading size='lg'>{item.company}</Heading>
                         </HStack>
                         <Text as='b' fontSize='xl'>{item.date}</Text>

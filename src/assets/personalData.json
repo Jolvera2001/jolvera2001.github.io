@@ -13,7 +13,7 @@
             "description": "As a Software Engineer Intern, I was put within a team to perform service related tasks. These were all different backend services that I had to learn and adapt to in order to implement the changes needed for my tasks. These changes were related to my team's current epic they were working on. Throughout the internship, I communicated with several different teams and different members of my own team either for training, questions, and advice.",
             "impact": "I was able to complete 3 user stories with increasing complexity. Ranging from database changes to implementing a change on a service for a specific feature. I was also able to learn more about SOA and microservices in general along with the advice learning more about software architecture. Because this was a more team-oriented internship, I also learned more about Agile and Scrum practices. I contributed to different PRs from different teams to learn more about PRs in general, how they function across a large codebase, and to keep other teams' work rolling with feedback. I kept constant communication with my team and my supervisor to make sure the things I did were within their established practices. ",
             "skills": "Backend Development, C#, ASP.NET, SOA, Visual Studio, SOAP, GitHub",
-            "img": "src/assets/veradigm.png"
+            "img": "veradigm.png"
         },
         {
             "name": "Software Engineer Intern",
@@ -22,7 +22,7 @@
             "description": "As a software engineer intern, I was tasked with creating a desktop application that would give the user different options to launch another another application with specific configurations. This application is a popular software used by many of the company's customers and provides a way to better streamline user experience. Throughout my internship, I attended regular standups, had weekly meetings with my mentor and supervisor, as well as created documentation outlining my design, approach, and discoveries that would be helpful for anyone picking up the project wherever I left off.",
             "impact":"I created a piece of software that would end up being used for many of the company's customers. Within a few weeks of my internship, I was able to create a prototype and spent the majority of my time at NI implementing features and implemented some UI. I communicated with many different teams across the company and presneting demos to these teams and even the Product Manager for the team I worked with. It was an amazing experience knowing that I started work on software that would end up being used by many people and it was a huge motivator for my work.",
             "skills": "Desktop Development, C#, Azure DevOps, WPF, Visual Studio",
-            "img": "src/assets/ni.webp"
+            "img": "ni.webp"
         }
     ],
     "projectsData": [
