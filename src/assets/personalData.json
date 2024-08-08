@@ -1,29 +1,48 @@
 {
     "aboutMeData": {
         "intro": "Hi, I'm Johan",
-        "opening": "This is my portfolio site! I'm an aspiring software engineer and currently in college. I'm within the last few semesters of my college career so I'm preparing for the real world soon.",
+        "opening": "This is my portfolio site! I'm an aspiring software engineer and currently in college. I'm have one more semester to go before I graduate, so I'm doing my best to prepare for the real world coming soon",
         "body": "I've had a portfolio site before, but it ended up being very complicated and was messy to maintain. This one has been very simple in contrast and coding this has been incredibly fun. I'm an aspiring software engineer currently in college, and I'm constantly looking for something to do in order to keep learning! I've gotten experience in both the frontend and backend sides of development and I'm hoping to get a role as a software engineer to go deep into these technologies",
         "closing": "If you want to check out my LinkedIn and Github, the icons on the left will lead to my profiles! Feel free to send me any feedback on my projects or connect on LinkedIn!"
     },
     "experienceData": [
         {
             "name": "Software Engineer Intern",
+            "date": "May 2024 - August 2024",
+            "company": "Veradigm",
+            "description": "As a Software Engineer Intern, I was put within a team to perform service related tasks. These were all different backend services that I had to learn and adapt to in order to implement the changes needed for my tasks. These changes were related to my team's current epic they were working on. Throughout the internship, I communicated with several different teams and different members of my own team either for training, questions, and advice.",
+            "impact": "I was able to complete 3 user stories with increasing complexity. Ranging from database changes to implementing a change on a service for a specific feature. I was also able to learn more about SOA and microservices in general along with the advice learning more about software architecture. Because this was a more team-oriented internship, I also learned more about Agile and Scrum practices. I contributed to different PRs from different teams to learn more about PRs in general, how they function across a large codebase, and to keep other teams' work rolling with feedback. I kept constant communication with my team and my supervisor to make sure the things I did were within their established practices. ",
+            "skills": "Backend Development, C#, ASP.NET, SOA, Visual Studio, SOAP, GitHub",
+            "img": "src/assets/veradigm.png"
+        },
+        {
+            "name": "Software Engineer Intern",
             "date": "May 2023 - August 2023",
             "company": "NI",
             "description": "As a software engineer intern, I was tasked with creating a desktop application that would give the user different options to launch another another application with specific configurations. This application is a popular software used by many of the company's customers and provides a way to better streamline user experience. Throughout my internship, I attended regular standups, had weekly meetings with my mentor and supervisor, as well as created documentation outlining my design, approach, and discoveries that would be helpful for anyone picking up the project wherever I left off.",
             "impact":"I created a piece of software that would end up being used for many of the company's customers. Within a few weeks of my internship, I was able to create a prototype and spent the majority of my time at NI implementing features and implemented some UI. I communicated with many different teams across the company and presneting demos to these teams and even the Product Manager for the team I worked with. It was an amazing experience knowing that I started work on software that would end up being used by many people and it was a huge motivator for my work.",
-            "skills": "C#, Azure DevOps, WPF, Visual Studio"
+            "skills": "Desktop Development, C#, Azure DevOps, WPF, Visual Studio",
+            "img": "src/assets/ni.webp"
         }
     ],
     "projectsData": [
         {
-            "name": "AplCore",
-            "date": "March 2024 - Current",
-            "status": "Current Project",
+            "name": "Kanban App",
+            "date": "August 2024 - Current",
+            "status": "In Progress",
+            "description": "This is a project that's following the trend of \"starting small\", which I realized leads to pretty easy development progress. I plan to just make a simple web app where a user can use a kanban board for their projects. Similar to how trello is organized, I plan to just make this a simple app, but there could always be room to add features depending on how fast and easy the project turns out.",
+            "skills": "Backend Development, Frontend Development, C#, TypeScript, ASP.NET Core, React, MongoDB, MongoDB Atlas, Shadcn",
+            "link": "https://github.com/Jolvera2001/kanban_application",
+            "linkDesc": "The Codebase is available on Github!"
+        },
+        {
+            "name": "Weather App",
+            "date": "July 2024",
+            "status": "Completed/can be improved",
             "description": "As sort of an ironic idea with the state of the current job market, this project is made as a way for a user to keep track of their job applications. It would be more user managed with them needing to update details on their own, but the aim is to make it much more manageable and easy compared to using something like Excel or Google Sheets. At this point, the project can easily expand to have other features. This project honestly started as a joke but ended up being something that was working well and I stuck with it.",
             "skills": "Backend Development, Frontend Development, Rust, React, MongoDB",
-            "link": "https://github.com/Jolvera2001/AplCore",
-            "linkDesc": "No current link or deployment, but the codebase is available to view on my Github!"
+            "link": "https://github.com/Jolvera2001/WeatherApp",
+            "linkDesc": "This project is considered complete and you can view it on Github!"
         },
         {
             "name": "GoatPlaces",
@@ -33,15 +52,6 @@
             "skills": "Backend Development, RESTful APIs, ASP.NET Core, C#, MongoDB, JWTs, Microsoft Azure",
             "link": "https://github.com/Jolvera2001/goatApp",
             "linkDesc": "The Current deployment on Azure is broken, but the codebase is also available in Github"
-        },
-        {
-            "name": "Room World",
-            "date": "Feburary 2024 - March 2024",
-            "status": "Shelved",
-            "description": "This was more of a experimental project working with SingalR and websockets. It also introduced me to Typescript in React, which was incredibly difficult. I also used a 3D engine library and was aiming to use all of these to sort of make a game where one player can join another in a 'room' and sort of interact with each other in real time. I've only gotten as far as generating another player model within one's screen so I know I'm almost there with achieving somehing to show off.",
-            "skills": "Backend Development, ASP.NET Core, SignalR, C#, React",
-            "link": "https://github.com/Jolvera2001/Room-world",
-            "linkDesc": "The Codebase is available on Github!"
         }
     ],
     "hobbiesData": [
