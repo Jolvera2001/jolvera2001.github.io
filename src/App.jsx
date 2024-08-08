@@ -27,29 +27,9 @@ import 'react-quill/dist/quill.snow.css';
 import NILogo from './assets/ni.webp';
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
 import resumePDF from './assets/Johan.pdf';
-import BlogPost from './components/BlogPosts';
 
 function App() {
   const [activeTab, setActiveTab] = useState("aboutMe");
-  const [blogList, setBlogList] = useState([]);
-
-  useEffect(() => {
-    const getBlogs = async () => {
-      const response = await fetch("https://jolveraorg.jetbrains.space/api/http/blog?$fields=data(author,created,title,docContent),next,totalCount",
-        {
-          method: 'GET',
-          headers: {
-            'Authorization': `Bearer ${import.meta.env.VITE_APP_SPACE_TOKEN}`,
-            'Accept': 'application/json',
-          }
-        });
-
-      const data = await response.json();
-      setBlogList(data.data);
-    }
-
-    getBlogs();
-  }, []);
 
   const handleTabClick = (tabName) => {
     setActiveTab(tabName);
@@ -58,7 +38,7 @@ function App() {
   return (
     <>
       <Flex>
-        <Box w='30%' height="100vh" bg='red.400' pt={20} boxShadow='lg' display='flex' alignContent='center' justifyContent='center'>
+        <Box w='30%' height="100vh" bg='red.400' pt={56} boxShadow='lg' display='flex' alignContent='center' justifyContent='center'>
           <VStack spacing={5}>
             <Heading>Johan Olvera</Heading>
             <Tabs isLazy orientation='vertical' variant='soft-rounded' size='lg' colorScheme='orange'>
@@ -66,8 +46,6 @@ function App() {
                 <Tab onClick={() => handleTabClick('aboutMe')} isSelected={activeTab === 'aboutMe'}>About Me</Tab>
                 <Tab onClick={() => handleTabClick('experience')} isSelected={activeTab === 'experience'}>Experience</Tab>
                 <Tab onClick={() => handleTabClick('projects')} isSelected={activeTab === 'projects'}>Projects</Tab>
-                <Tab onClick={() => handleTabClick('hobbies')} isSelected={activeTab === 'hobbies'}>Hobbies</Tab>
-                <Tab onClick={() => handleTabClick('blog')} isSelected={activeTab === 'blog'}>Blog</Tab>
               </TabList>
             </Tabs>
             <HStack spacing={5}>
@@ -100,6 +78,7 @@ function App() {
                     <Center>
                       <Text fontSize='3xl' my={5} >{personalData.aboutMeData.intro}</Text>
                     </Center>
+                    <Text fontSize='xl'>{personalData.aboutMeData.opening}</Text>
                     <Text fontSize='xl'>{personalData.aboutMeData.body}</Text>
                     <Text fontSize='xl'>{personalData.aboutMeData.closing}</Text>
                   </Stack>
@@ -117,7 +96,7 @@ function App() {
                     {personalData.experienceData.map((item) => (
                       <Box key={item.id}>
                         <HStack mb={2}>
-                          <Image name='NI' src={NILogo} boxSize='50px' objectFit='cover' />
+                          <Image name={item.company} src={item.img} boxSize='50px' objectFit='cover' />
                           <Heading size='lg'>{item.company}</Heading>
                         </HStack>
                         <Heading size='lg'>{item.name}</Heading>
@@ -165,38 +144,6 @@ function App() {
                 </Box>
               </SlideFade>
             }
-            {activeTab === 'hobbies' &&
-              <SlideFade in={activeTab === 'hobbies'}>
-                <Box p={5} m={5}>
-                  <Stack spacing={4}>
-                    <Center>
-                      <Heading>Hobbies</Heading>
-                    </Center>
-                    <Divider borderWidth='1.5px' borderColor='black' />
-                    {personalData.hobbiesData.map((item) => (
-                      <Box key={item.id}>
-                        <Heading mb={5} size='lg'>{item.hobby}</Heading>
-                        <Text mb={3} fontSize='xl'>{item.description}</Text>
-                        <Text fontSize='xl'>{item.plans}</Text>
-                        <Divider orientation='horizontal' borderColor="grey" mt={5} mr={2} />
-                      </Box>
-                    ))}
-                  </Stack>
-                </Box>
-              </SlideFade>
-            }
-            {activeTab === 'blog' &&
-              <SlideFade in={activeTab === 'blog'}>
-                <Box p={5} m={5}>
-                  <Stack spacing={4}>
-                    <Center>
-                      <Heading>Blog</Heading>
-                    </Center>
-                    <Divider borderWidth='1.5px' borderColor='black' />
-                    <BlogPost data={blogList} />
-                  </Stack>
-                </Box>
-              </SlideFade>}
           </Container>
         </Box>
       </Flex>
