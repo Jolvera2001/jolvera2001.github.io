@@ -30,9 +30,9 @@
             "name": "Kanban App",
             "date": "August 2024 - Current",
             "status": "In Progress",
-            "description": "This is a project that's following the trend of \"starting small\", which I realized leads to pretty easy development progress. I plan to just make a simple web app where a user can use a kanban board for their projects. Similar to how trello is organized, I plan to just make this a simple app, but there could always be room to add features depending on how fast and easy the project turns out.",
+            "description": "This is a project that's following the trend of \"starting small\", which I realized leads to pretty easy development progress. I plan to just make a simple web app where a user can use a kanban board for their projects. Similar to how trello is organized, I plan to just make this a simple app, but there could always be room to add features depending on how fast and easy the project turns out. I've also decided to use Go with Gin as my backend, and so far Go has been an amazing language to work with.",
             "skills": "Backend Development, Frontend Development, C#, TypeScript, ASP.NET Core, React, MongoDB, MongoDB Atlas, Shadcn",
-            "link": "https://github.com/Jolvera2001/kanban_application",
+            "link": "https://github.com/Jolvera2001/kanban-go",
             "linkDesc": "The Codebase is available on Github!"
         },
         {
